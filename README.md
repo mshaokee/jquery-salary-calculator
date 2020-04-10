@@ -7,7 +7,7 @@ EMPLOYEE MONTHLY COSTS
 --Create an application that records employee salaries and adds salaries up to report monthly costs. 
 
 --BASE MODE--
-[ ]Create a table that takes in inputs
+[x]Create a table that takes in inputs
 [ ]Create inputs that take in employee first name, last name, ID, job title, and annual salary.
 [ ]Create a Submit button that takes in the information
 [ ]Have that information calculate Monthly Costs
