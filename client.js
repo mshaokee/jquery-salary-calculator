@@ -7,8 +7,12 @@ function readyNow() {
     console.log('jquery running');
     //create submit inputs on click
     $('#submitBtn').on('click', submitInputs)
-
+    $('#employeeOutputs').on('click', 'tr', 'td', deleteBtn);
 }//end readyNow
+
+function deleteBtn (){
+    $(this).remove();
+}//deleteBtn
 
 function submitInputs() {
     //GETTER inputs and place in OBJECT
@@ -22,38 +26,42 @@ function submitInputs() {
     //push objects into employees array
     employees.push(inputsToSubmit);
     console.log(inputsToSubmit);
+    $('#firstName').val('');
+    $('#lastName').val('');
+    $('#idNumber').val('');
+    $('#jobTitle').val('');
+    $('#annualSalary').val('');
     displayEmployees();
-    displayTotalMonthly(); //---I THINK IMMA USE THIS TO MATCH MONTHLY TOTAL
+
 }//end submitInputs
 
 function displayEmployees() {
     console.log('in displayEmployees', employees);
     //target employee output
     let el = $('#employeeOutputs');
+    let monthlyTotal = 0;
     //empty employees
     el.empty();
     //loop through employees
     for (let i = 0; i < employees.length; i++) {
         //append inputs to table
-        el.append(`<td> ${employees[i].firstname} </td>
-                   <td> ${employees[i].lastname} </td>
-                   <td> ${employees[i].idnumber} </td>
-                   <td> ${employees[i].jobtitle} </td>
-                   <td> ${employees[i].annualsalary} </td>`)
+        el.append(`<tr> <td> ${employees[i].firstname} </td> 
+                        <td> ${employees[i].lastname} </td>
+                        <td> ${employees[i].idnumber} </td>
+                        <td> ${employees[i].jobtitle} </td>
+                        <td> ${employees[i].annualsalary} </td> 
+                        <td> <button id="deleteBtn">Delete</button></td>
+                    </tr>`)
+
+        monthlyTotal += Number(`${employees[i].annualsalary}`) / 12;
+        console.log(monthlyTotal);
+        //empty inputs
+        $('#totalMonthlyOutput').empty().append(monthlyTotal);
+        //create if statement for RED background
+        if (monthlyTotal > 20000) {
+            $('#totalMonthly').addClass('red')
+        }
     }//end for loop
 }//end displayEmployees
 
-function displayTotalMonthly() {
-    console.log('in displayTotalMonthly');
-    //create array to hold total monthly
-    let monthlyTotal = [];
-    //get user input
-    const searchMonthly = $(employeeOutputs).val();
-    console.log('searching for ', searchMonthly);
-    
-    //loop through employees and find their costs DIVIDE BY 4
-    //display total on DOM
-    //loop through total monthly array
-    //append to #totalMonthly
 
-}//end displayTotalMonthly function

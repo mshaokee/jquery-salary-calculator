@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <table class="table-hover">
+    <table class="table">
         <thead>
             <tr>
                 <h1>EMPLOYEE MONTHLY COSTS</h1>
@@ -30,19 +30,21 @@
         <tbody>
             <tr>
                 <h3>Employees</h3>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">ID Number</th>
-                <th scope="col">Job Title</th>
-                <th scope="col">Annual Salary</th>
-            </tr id="rowInputPlaceholder">
-            <tr id="employeeOutputs">
-            </tr>
-            <tr id="totalMonthly">
-                <td>Total Monthly</td>
+                <th scope="row">First Name</th>
+                <th scope="row">Last Name</th>
+                <th scope="row">ID Number</th>
+                <th scope="row">Job Title</th>
+                <th scope="row">Annual Salary</th>
+                <th scope="row"></th>
             </tr>
         </tbody>
+
+        <tbody id="employeeOutputs">
+        </tbody>
+
     </table>
+    <div id="totalMonthly">Total Monthly:<span id="totalMonthlyOutput"></span>
+    </div>
 </body>
 
 </html>
