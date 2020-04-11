@@ -8,9 +8,9 @@ EMPLOYEE MONTHLY COSTS
 
 --BASE MODE--
 [x]Create a table that takes in inputs
-[ ]Create inputs that take in employee first name, last name, ID, job title, and annual salary.
-[ ]Create a Submit button that takes in the information
-[ ]Have that information calculate Monthly Costs
+[x]Create inputs that take in employee first name, last name, ID, job title, and annual salary.
+[x]Create a Submit button that takes in the information
+[ ]Have that information calculate Monthly Costs from annual salary
 [ ]Append Monthly Costs to DOM and CLEAR input fields
 [ ]If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
 [ ]Create DELETE button that removes employee from DOM
