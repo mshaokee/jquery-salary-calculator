@@ -16,12 +16,14 @@ function submitInputs() {
         firstname: $('#firstName').val(),
         lastname: $('#lastName').val(),
         idnumber: $('#idNumber').val(),
+        jobtitle: $('#jobTitle').val(),
         annualsalary: $('#annualSalary').val()
     }//end inputsToSubmit variable
     //push objects into employees array
     employees.push(inputsToSubmit);
     console.log(inputsToSubmit);
-    displayEmployees()
+    displayEmployees();
+    displayTotalMonthly(); //---I THINK IMMA USE THIS TO MATCH MONTHLY TOTAL
 }//end submitInputs
 
 function displayEmployees() {
@@ -36,8 +38,22 @@ function displayEmployees() {
         el.append(`<td> ${employees[i].firstname} </td>
                    <td> ${employees[i].lastname} </td>
                    <td> ${employees[i].idnumber} </td>
+                   <td> ${employees[i].jobtitle} </td>
                    <td> ${employees[i].annualsalary} </td>`)
     }//end for loop
-
 }//end displayEmployees
 
+function displayTotalMonthly() {
+    console.log('in displayTotalMonthly');
+    //create array to hold total monthly
+    let monthlyTotal = [];
+    //get user input
+    const searchMonthly = $(employeeOutputs).val();
+    console.log('searching for ', searchMonthly);
+    
+    //loop through employees and find their costs DIVIDE BY 4
+    //display total on DOM
+    //loop through total monthly array
+    //append to #totalMonthly
+
+}//end displayTotalMonthly function
