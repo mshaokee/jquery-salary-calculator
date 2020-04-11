@@ -21,7 +21,11 @@ function submitInputs() {
     //push objects into employees array
     employees.push(inputsToSubmit);
     console.log(inputsToSubmit);
-    
+    displayEmployees()
+}
+
+function displayEmployees() {
+    console.log('in displayEmployees', employees);
 
 }
 
