@@ -11,7 +11,9 @@ function readyNow() {
 }//end readyNow
 
 function deleteBtn (){
+    console.log('deleted');
     $(this).remove();
+    employees.splice(this, 1);
 }//deleteBtn
 
 function submitInputs() {
@@ -44,7 +46,7 @@ function displayEmployees() {
     el.empty();
     //loop through employees
     for (let i = 0; i < employees.length; i++) {
-        //append inputs to table
+        //append inputs to table inside of a row
         el.append(`<tr> <td> ${employees[i].firstname} </td> 
                         <td> ${employees[i].lastname} </td>
                         <td> ${employees[i].idnumber} </td>
@@ -60,6 +62,7 @@ function displayEmployees() {
         //create if statement for RED background
         if (monthlyTotal > 20000) {
             $('#totalMonthly').addClass('red')
+            console.log('too muchhhh');
         }
     }//end for loop
 }//end displayEmployees

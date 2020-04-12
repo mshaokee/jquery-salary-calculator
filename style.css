@@ -2,3 +2,39 @@
     background-color: red;
 }
 
+.employeeTitle {
+    text-align: center;
+}
+
+body {
+    background-color: darkslategray;
+}
+
+.buttonPos {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.inputlocale {
+    text-align: center;
+    margin: 20px 20px;
+}
+.inputs {
+    margin-left: auto 20px;
+    text-align: center;
+}
+
+/* addemployee titles */
+.addemployees {
+    text-align: center;
+}
+
+/* how total monthly displays */
+#totalMonthly {
+    font-size: 40px;
+}
+
+#totalMonthlyOutput {
+    
+}
