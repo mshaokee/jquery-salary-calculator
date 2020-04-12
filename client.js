@@ -12,9 +12,19 @@ function readyNow() {
 
 function deleteBtn (){
     console.log('deleted');
+    //specified in click, remove
     $(this).remove();
+    //splice same item, only 1 item
     employees.splice(this, 1);
+    console.log(employees);
+
+    
 }//deleteBtn
+
+// Once the employee is deleted, update the total spend 
+// on salaries account for this employee's removal.
+// logic knows which element was removed. You will need to use`.text()` 
+// as a getter
 
 function submitInputs() {
     //GETTER inputs and place in OBJECT
@@ -64,6 +74,7 @@ function displayEmployees() {
             $('#totalMonthly').addClass('red')
             console.log('too muchhhh');
         }
+    
     }//end for loop
 }//end displayEmployees
 
