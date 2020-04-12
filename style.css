@@ -5,10 +5,14 @@
 
 .employeeTitle {
     text-align: center;
+    color: slategray;
 }
 
 body {
     background-color: darkslategray;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .buttonPos {
@@ -20,6 +24,8 @@ body {
 .inputlocale {
     text-align: center;
     margin: 20px 20px;
+    background-color: grey;
+    padding: 10px;
 }
 .inputs {
     margin-left: auto 20px;
@@ -29,6 +35,9 @@ body {
 /* addemployee titles */
 .addemployees {
     text-align: center;
+    border: dimgray;
+    border-style: outset;
+    
 }
 
 /* how total monthly displays */
@@ -36,6 +45,6 @@ body {
     font-size: 40px;
 }
 
-#totalMonthlyOutput {
-    
+#totalMonthly {
+    color: slategray;
 }
